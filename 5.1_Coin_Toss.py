@@ -7,8 +7,22 @@ COIN TOSS PROGRAM
 4.) Create a running total for the number of heads and the number of tails and print the total at the end.
 '''
 
+import random
 
+heads = 0
+tails = 0
 
+for i in range(50):
+    random_num = random.randint(1,2)
+
+    if random_num == 1:
+        heads += 1
+
+    if random_num == 2:
+        tails += 1
+
+print("You flipped", heads, "heads.")
+print("You flipped", tails, "tails.")
 
 
 
