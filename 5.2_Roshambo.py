@@ -11,8 +11,11 @@ When the user quits print a win/loss record
 
 '''
 
+import random
 
+print("Use 1 for rock, 2 for paper and 3 for scissors.")
 
+for
 
 
 
