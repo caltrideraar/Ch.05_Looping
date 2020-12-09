@@ -13,11 +13,36 @@ When the user quits print a win/loss record
 
 import random
 
+wins = 0
+losses = 0
+
 print("Use 1 for rock, 2 for paper and 3 for scissors.")
 
-for
+quit = input("Would you like to quit?").lower()
+
+if quit == "yes":
+    end()
+
+choice = int(input("What is your move?"))
+
+comp_choice = random.randint(1, 3)
+
+if choice == 2 and comp_choice == 1:
+    print("You win!")
+    wins = wins + 1
+
+if choice == 1 and comp_choice == 3:
+    print("You win!")
+    wins = wins + 1
+
+if choice == 3 and comp_choice == 2:
+    print("You win!")
+    wins = wins + 1
 
 
+if (choice == 1 and comp_choice == 2) or (choice == 2 and comp_choice == 3) or (choice == 3 and comp_choice == 1):
+    print("You lose.")
+    losses = losses + 1
 
 
 
