@@ -16,12 +16,16 @@ import random
 wins = 0
 losses = 0
 
+quit = input("Do you want to quit? ").lower()
+
 print("Use 1 for rock, 2 for paper and 3 for scissors.")
 
-quit = input("Would you like to quit?").lower()
+
 
 if quit == "yes":
-    end()
+    print("You won", wins ,"times! You lost", losses ,"times.")
+if quit == "yes":
+    exit()
 
 choice = int(input("What is your move?"))
 
@@ -40,12 +44,14 @@ if choice == 3 and comp_choice == 2:
     wins = wins + 1
 
 
-if (choice == 1 and comp_choice == 2) or (choice == 2 and comp_choice == 3) or (choice == 3 and comp_choice == 1):
+if choice == 1 and comp_choice == 2:
     print("You lose.")
     losses = losses + 1
 
+if choice == 2 and comp_choice == 3:
+    print("You lose.")
+    losses = losses + 1
 
-
-
-
-
+if choice == 3 and comp_choice == 1:
+    print("You lose.")
+    losses = losses + 1
